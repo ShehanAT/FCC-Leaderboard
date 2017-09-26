@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "Simple starter package for Redux with React and Babel support",
   "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/StephenGrider/ReduxSimpleStarter.git"
+  },
   "scripts": {
+    "webpack": "npm run webpack",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
@@ -26,12 +30,21 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-md-spinner": "^0.1.0",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "redux": "^3.0.4"
+  },
+  "bugs": {
+    "url": "https://github.com/StephenGrider/ReduxSimpleStarter/issues"
+  },
+  "homepage": "https://github.com/StephenGrider/ReduxSimpleStarter#readme",
+  "directories": {
+    "test": "test"
   }
 }
